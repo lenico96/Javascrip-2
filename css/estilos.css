@@ -1,0 +1,468 @@
+/*fuentes*/
+@font-face {
+    font-family: 'fuentenav';
+    src: url(../essets/fonts/fuentenav.ttf);
+}
+
+@font-face {
+    font-family: 'anton';
+    src: url(../essets/fonts/Anton.ttf);
+}
+
+@font-face {
+    font-family: 'tituloincio';
+    src: url(../essets/fonts/tituloinicio.ttf);
+}
+
+@font-face {
+    font-family: 'fuenteparrafo';
+    src: url(../essets/fonts/fuenteparrafo.ttf);
+}
+
+@font-face {
+    font-family: 'tituloofertas';
+    src: url(../essets/fonts/tituloofertas.ttf);
+}
+
+@font-face {
+    font-family: 'catalogo';
+    src: url(../essets/fonts/catalogo.ttf);
+}
+
+@font-face {
+    font-family: 'catalogotitulos';
+    src: url(../essets/fonts/catalogotitulos.ttf);
+}
+
+@font-face {
+    font-family: 'Faster';
+    src: url(../essets/fonts/Faster.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+
+    
+    
+    background-attachment: fixed;
+    background-size: cover;
+background-attachment: fixed;
+background-size: cover;
+background-attachment: fixed;
+background-size: cover;
+}
+
+nav{
+    background: #9eb3b3;
+    height: 80px;
+    width: 100%;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(127, 141, 204, 0.2);
+
+backdrop-filter: blur( 0px );
+-webkit-backdrop-filter: blur( 0px );
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: rgb(164, 154, 154);
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'anton';
+}
+li a.active, li a:hover{
+    background: #2275b4;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: none;
+    grid-column: 8/8;
+    margin-top: 10px;
+}
+#check{
+    display: none;
+}
+
+.shop{
+    grid-column: 7/7;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.tituloofertas h1{
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: 'anton';
+    
+
+
+}
+
+.segundotitulo{
+    display: grid;
+    grid-template-columns:repeat(15, 1fr);
+    justify-content: center;
+
+    
+}
+
+
+
+.sub1{
+    grid-column: 2/7;
+    margin-left: 60px;
+    font-family: 'tituloofertas';
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.info{
+    margin-bottom: 40px;
+}
+
+
+.oferta1:hover{
+    animation-name: pulse;
+    animation-duration: 3s;
+    ;
+}
+.oferta2:hover{
+    animation-name: pulse;
+    animation-duration: 3s;
+}
+.oferta3:hover{
+    animation-name: pulse;
+    animation-duration: 3s;
+}
+.oferta4:hover{
+    animation-name: pulse;
+    animation-duration: 3s;
+}
+
+.ofertascontenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 2px;
+    
+    
+
+}
+
+.oferta1{
+    cursor: pointer;
+    
+}
+
+.oferta2{
+
+    cursor: pointer;
+}
+
+.oferta3{
+
+    cursor: pointer;
+}
+
+.oferta4{
+
+    cursor: pointer;
+}
+
+.contenedorbody{
+    max-width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: repeat(3, minmax(150px, auto));
+    padding-top: 10px;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+
+    
+}
+
+
+.boton{
+    padding-top: 350px;
+}
+
+.semilla1{
+    cursor: pointer;
+    background-image: url(../essets/img/zapas1.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+    
+    
+
+}
+
+
+.semilla2{
+    cursor: pointer;
+    background-image: url(../essets/img/zapas2.jpg); 
+    background-repeat: no-repeat;
+    background-size: 270px;
+
+}
+
+
+.semilla3{
+    cursor: pointer;
+    background-image: url(../essets/img/zapas3.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+}
+
+
+
+.semilla4{
+    cursor: pointer;
+    background-image: url(../essets/img/shoes4.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+}
+
+
+.semilla5{
+    cursor: pointer;
+    background-image: url(../essets/img/zapas5.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+}
+
+.semilla6{
+    cursor: pointer;
+    background-image: url(../essets/img/zapas6.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+}
+
+.semilla7{
+    cursor: pointer;
+    background-image: url(../essets/img/zapas7.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+}
+
+.semilla8{
+    cursor: pointer;
+    background-image: url(../essets/img/zapas8.jpg);
+    background-repeat: no-repeat;
+    background-size: 270px;
+}
+
+.principal {
+    height: 40vh;
+    background-image: url("../essets/img/carrusel2.jpg");
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    
+    
+}
+
+.tituloinicio {
+    margin-left: 500px;
+    font-family: 'tituloincio';
+    font-size: 60px;
+    color: rgb(236, 244, 241);
+    text-shadow: #000 4px 1px;
+    
+}
+
+/* boton */
+.cta {
+    border: none;
+    background: none;
+   }
+   
+   .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 10px;
+    padding-right: 15px;
+    text-transform: uppercase;
+   }
+   
+   .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active svg {
+    transform: scale(0.9);
+   }
+   
+   .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+   }
+   
+   .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+   }
+   
+   .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+   }
+
+   .marginleft{
+       margin-left: 30px;
+   }
+
+
+/* MEDIAS QUERIES */
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: flex;
+    }
+    .shop{
+    position:absolute;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: grid;
+    grid-column: 5/7;
+    margin-top: 10px;
+    }
+        
+
+    .logo{
+        height: 70px;
+        
+       
+    }
+    nav{
+        
+    width: 105%;
+    padding: 0 50px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    
+    
+    
+    }
+
+    .logo{
+        width: 170px;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        z-index: 10;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        //background: #000090;
+        //color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    
+}
+
+////////
+#producto-contenedor {
+    display: flex;
+    gap: 1rem;
+    max-width: 60rem;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  p {
+    line-height: 1.8;
+  }
+  
+  .card {
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #f7efef, #d0c9c9);
+    box-shadow:  5px 5px 19px #847f7f,
+                 -5px -5px 19px #ffffff;
+  }
+  
+  select {
+    display: inline;
+    text-align: center;
+    border: 1px solid rgb(27, 169, 39);
+  }
+  .card-title {
+    color: #cd0e0e;
+  }
+
+  .card-image{
+    width: 180px;
+  }
+
+
+
