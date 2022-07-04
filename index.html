@@ -15,6 +15,7 @@
 </head>
 
     <header>
+        
         <nav>
             <a href="#" class="enlace">
                 <img src="../proyecto2/essets/img/logo.png" alt="" class="logo" width="170px">
@@ -26,7 +27,7 @@
             
             <label for="shop" class="shop">
                 
-                    <i class="fa-solid fa-cart-shopping"></i>
+                <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
                 
             </label>
             
@@ -106,11 +107,28 @@
     <div class="contenedorbody" id="producto-contenedor">
 
     </div>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <!-- <div class="productoEnCarrito">
+                    <p>Buzo 1</p>
+                    <p>Precio: $1200</p>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div> -->
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
     
 
 
     <script src="../proyecto2/productos.js"></script>
     <script src="../proyecto2/creadorcard.js"></script>
+    <script src="../proyecto2/modal.js"></script>
     </body>
     <script src="https://kit.fontawesome.com/41aadf3d71.js" crossorigin="anonymous"></script>
     

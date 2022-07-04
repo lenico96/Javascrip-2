@@ -1,3 +1,4 @@
+
 /*fuentes*/
 @font-face {
     font-family: 'fuentenav';
@@ -48,13 +49,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: #ffffff;
 
-    
-    
-    background-attachment: fixed;
-    background-size: cover;
+
+
+body{
+background-color: #ffffff; 
+background-attachment: fixed;
+background-size: cover;
 background-attachment: fixed;
 background-size: cover;
 background-attachment: fixed;
@@ -109,8 +110,76 @@ li a.active, li a:hover{
 
 .shop{
     grid-column: 7/7;
-    font-size: 30px;
+    width: 150px;
     color: rgb(0, 0, 0);
+    
+}
+
+.logo{
+    width: 180px;
+    
+    
+}
+
+.logo:hover{
+    animation-name: pulse;
+    animation-duration: 2s;
+}
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: royalblue;
+    padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: royalblue;
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+    
 }
 
 .tituloofertas h1{
@@ -218,70 +287,7 @@ li a.active, li a:hover{
     padding-top: 350px;
 }
 
-.semilla1{
-    cursor: pointer;
-    background-image: url(../essets/img/zapas1.jpg);
-    background-repeat: no-repeat;
-    background-size: 270px;
-    
-    
 
-}
-
-
-.semilla2{
-    cursor: pointer;
-    background-image: url(../essets/img/zapas2.jpg); 
-    background-repeat: no-repeat;
-    background-size: 270px;
-
-}
-
-
-.semilla3{
-    cursor: pointer;
-    background-image: url(../essets/img/zapas3.jpg);
-    background-repeat: no-repeat;
-    background-size: 270px;
-}
-
-
-
-.semilla4{
-    cursor: pointer;
-    background-image: url(../essets/img/shoes4.jpg);
-    background-repeat: no-repeat;
-    background-size: 270px;
-}
-
-
-.semilla5{
-    cursor: pointer;
-    background-image: url(../essets/img/zapas5.jpg);
-    background-repeat: no-repeat;
-    background-size: 270px;
-}
-
-.semilla6{
-    cursor: pointer;
-    background-image: url(../essets/img/zapas6.jpg);
-    background-repeat: no-repeat;
-    background-size: 270px;
-}
-
-.semilla7{
-    cursor: pointer;
-    background-image: url(../essets/img/zapas7.jpg);
-    background-repeat: no-repeat;
-    background-size: 270px;
-}
-
-.semilla8{
-    cursor: pointer;
-    background-image: url(../essets/img/zapas8.jpg);
-    background-repeat: no-repeat;
-    background-size: 270px;
-}
 
 .principal {
     height: 40vh;
@@ -428,15 +434,7 @@ li a.active, li a:hover{
 }
 
 ////////
-#producto-contenedor {
-    display: flex;
-    gap: 1rem;
-    max-width: 60rem;
-    margin: 60px auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+
   
   p {
     line-height: 1.8;
@@ -445,10 +443,7 @@ li a.active, li a:hover{
   .card {
     max-width: 90%;
     padding: 30px;
-    border-radius: 8px;
-    background: linear-gradient(145deg, #f7efef, #d0c9c9);
-    box-shadow:  5px 5px 19px #847f7f,
-                 -5px -5px 19px #ffffff;
+    
   }
   
   select {
@@ -457,12 +452,159 @@ li a.active, li a:hover{
     border: 1px solid rgb(27, 169, 39);
   }
   .card-title {
-    color: #cd0e0e;
+    color: #000000;
   }
 
   .card-image{
     width: 180px;
   }
 
+
+
+
+  #boton-carrito {
+    border: none;
+    color: rgb(37, 48, 81);
+    font-size: 20px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #2275b4;
+}
+#boton-carrito:focus {
+    outline: none;
+}
+
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+p {
+    line-height: 1.8;
+}
+.producto {
+    max-width: 100%;
+    padding: 30px;
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #f7efef, #d0c9c9);
+    box-shadow:  5px 5px 19px #847f7f,
+                 -5px -5px 19px #ffffff;
+                 animation-name: pulse;
+                 animation-duration: 3s;
+}
+.precioProducto {
+    font-weight: 700;
+}
+.boton-agregar {
+    background-color: rgb(112, 132, 190);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    margin-left: 10px;
+    margin-top: 7px;
+    
+}
+.boton-agregar:hover {
+    cursor: pointer;
+}
+.boton-agregar:focus {
+    outline: none;
+}
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: royalblue;
+    padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: royalblue;
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+    
+}
+
+.productoEnCarrito {
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid #2275b4;
+}
+
+.boton-eliminar {
+    background-color: white;
+    color: red;
+    border: none;
+    font-size: 20px;
+}
+
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+.boton-eliminar:focus {
+    outline: none;
+}
 
 
