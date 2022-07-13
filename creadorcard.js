@@ -111,7 +111,7 @@ botonVaciar.addEventListener('click', () => {
 
 
 
-//Storage
+//Storage carrito
 
 const cantidad = document.getElementById('cantidad')
 const precioTotalFinal = document.getElementById('precioTotal')
