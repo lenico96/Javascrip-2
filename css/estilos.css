@@ -268,12 +268,12 @@ li a.active, li a:hover{
 }
 
 .contenedorbody{
-    max-width: 1110px;
+    max-width: 600px;
     margin: 0 auto;
     display: grid;
     grid-gap: 30px;
     grid-template-columns:repeat(4, 1fr);
-    grid-template-rows: repeat(3, minmax(150px, auto));
+    grid-template-rows: repeat(2, minmax(150px, auto));
     padding-top: 10px;
     flex-wrap: wrap;
     
@@ -623,5 +623,6 @@ p {
     transform: scale(1.05);
    }
    
+
 
 

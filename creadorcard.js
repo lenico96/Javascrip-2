@@ -26,7 +26,7 @@ let carrito = []
                             <img class="card-image" src=${producto.img}></div>
                             <p class="card-title">${producto.nombre}</p>
                             <p class="card-title precioProducto">Precio:${producto.precio}</p>
-                            <button id="agregar${producto.id}" class="boton-agregar">Agregar al carro <i class="fas fa-shopping-cart"></i><button>
+                            <button  id="agregar${producto.id}"  class="boton-agregar">Agregar al carro <i class="fas fa-shopping-cart"></i><button>
                             
                         </div>
                         `
@@ -37,6 +37,8 @@ let carrito = []
 
         boton.addEventListener('click', () => {
             agregarAlCarrito(producto.id)     //le agrege el event al boton y ejecuto la funcion agregarAlCarrito
+
+            
             
         })
     });
@@ -111,7 +113,7 @@ botonVaciar.addEventListener('click', () => {
 
 
 
-//Storage carrito
+//Storage carrito.
 
 const cantidad = document.getElementById('cantidad')
 const precioTotalFinal = document.getElementById('precioTotal')
@@ -129,6 +131,21 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarCarrito()
     }
 })
+
+
+
+// toastyfy
+const btn = document.getElementById(`agregar${producto.id}`);
+btn.addEventListener('click', () => {
+    Toastify({
+        text: "agregado al carro con exito",
+        duration: 2000
+      
+
+    }).showToast()
+
+})
+
 
 
 
