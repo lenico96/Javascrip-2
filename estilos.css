@@ -2,42 +2,42 @@
 /*fuentes*/
 @font-face {
     font-family: 'fuentenav';
-    src: url(../essets/fonts/fuentenav.ttf);
+    src: url(/essets/fonts/fuentenav.ttf);
 }
 
 @font-face {
     font-family: 'anton';
-    src: url(../essets/fonts/Anton.ttf);
+    src: url(/essets/fonts/Anton.ttf);
 }
 
 @font-face {
     font-family: 'tituloincio';
-    src: url(../essets/fonts/tituloinicio.ttf);
+    src: url(/essets/fonts/tituloinicio.ttf);
 }
 
 @font-face {
     font-family: 'fuenteparrafo';
-    src: url(../essets/fonts/fuenteparrafo.ttf);
+    src: url(/essets/fonts/fuenteparrafo.ttf);
 }
 
 @font-face {
     font-family: 'tituloofertas';
-    src: url(../essets/fonts/tituloofertas.ttf);
+    src: url(/essets/fonts/tituloofertas.ttf);
 }
 
 @font-face {
     font-family: 'catalogo';
-    src: url(../essets/fonts/catalogo.ttf);
+    src: url(/essets/fonts/catalogo.ttf);
 }
 
 @font-face {
     font-family: 'catalogotitulos';
-    src: url(../essets/fonts/catalogotitulos.ttf);
+    src: url(/essets/fonts/catalogotitulos.ttf);
 }
 
 @font-face {
     font-family: 'Faster';
-    src: url(../essets/fonts/Faster.ttf);
+    src: url(/essets/fonts/Faster.ttf);
 }
 
 *{
