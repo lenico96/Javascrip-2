@@ -134,22 +134,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// toastyfy
-const btn = document.getElementById(`agregar${producto.id}`);
-btn.addEventListener('click', () => {
-    Toastify({
-        text: "agregado al carro con exito",
-        duration: 2000
-      
+// toastyfy libreria
+//nota: pude solucionarlo creando un for que me recorra todos los botones
 
-    }).showToast()
+const buttons = document.getElementsByClassName("boton-agregar");
+for (const btn of buttons)
+{
+    btn.addEventListener('click', () =>{
+        Toastify({
+            text: "Agregado con exito !",
+            duration: 2000
+          
+    
+        }).showToast()
 
-})
-
-
-
-
-
+    })
+}
 
 
 

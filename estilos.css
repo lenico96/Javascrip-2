@@ -517,6 +517,19 @@ p {
     margin-top: 7px;
     
 }
+
+.vaciar {
+    background-color: rgb(230, 20, 20);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    margin-left: 10px;
+    margin-top: 7px;
+    cursor: pointer;
+    
+}
 .boton-agregar:hover {
     cursor: pointer;
 }
