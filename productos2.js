@@ -1,6 +1,10 @@
+
+
+//ROMPI TODO XDDDDDDD//
+
 const contenedorProductos2 = document.getElementById("producto-contenedor2");
 
-const Destacados = 
+const destacados = 
 [
 {
     "id": 1,
@@ -37,7 +41,7 @@ const Destacados =
 }
 ];
 
-Destacados.forEach((destacado) => {
+destacados.forEach((destacado) => {
     const div = document.createElement("div");       //primero inyecto el html al doom
     div.classList.add("card");
     div.innerHTML =
@@ -45,17 +49,71 @@ Destacados.forEach((destacado) => {
                         <img class="card-image" src=${destacado.img}></div>
                         <p class="card-title">${destacado.nombre}</p>
                         <p class="card-title precioProducto">Precio:${destacado.precio}</p>
-                        <button id="agregar${destacado.id}" class="boton-agregar">Agregar al carro <i class="fas fa-shopping-cart"></i><button>
+                        <button id="agregarDestacado${destacado.id}" class="boton-agregar">Agregar al carro <i class="fas fa-shopping-cart"></i><button>
                         
                     </div>
                     `
     contenedorProductos2.appendChild(div);
 
-    const boton = document.getElementById(`agregar${destacado.id}`)
+    const boton = document.getElementById(`agregarDestacado${destacado.id}`)
 
 
     boton.addEventListener('click', () => {
-        agregarAlCarrito(destacado.id)     //le agrege el event al boton y ejecuto la funcion agregarAlCarrito
+        agregarDestacados(destacado.id)     //le agrege el event al boton y ejecuto la funcion agregarAlCarrito
         
     })
 });
+
+const agregarDestacados = (destaId) => {
+    const existe = carrito.find (desta => desta.id === destaId) 
+
+    if (existe){ 
+        const prod = carrito.map (prod => { 
+            if (desta.id === prodId){
+                desta.cantidad++
+            }
+        })
+    } else { 
+        const item = destacados.find((desta) => desta.id === destaId)
+       
+        carrito.push(item)
+    }
+    actualizarDestacado() 
+    
+
+    
+};
+
+const actualizarDestacado = () => {
+
+       //Cada vez que yo llame a actualizarCarrito, lo primero q hago
+                                     //es borrar el nodo. Y despues recorro el array lo actualizo de nuevo y lo rellena con la info actualizado
+
+                                                //lo mismo que en el paso 1 creo como se va a ver dentro del modal con sus respectivas
+                                                //propiedades y clases que estan en los estilos, le hago un appendchil
+    carrito.forEach((desta) => {
+        const div = document.createElement('div')
+        div.className = ('productoEnCarrito')
+        div.innerHTML = `
+        <p><span id="nombre">${desta.nombre}</span></p>
+        <p>Precio:$<span id="precio">${desta.precio}</span></p>
+        <p>Cantidad: <span id="cantidad">${desta.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${desta.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        `
+
+        contenedorCarrito.appendChild(div)
+
+    })
+    contadorCarrito.innerText = carrito.length    //le agrego el contador con un innertext
+    
+    precioTotal.innerText = carrito.reduce((acc, desta) => acc + desta.cantidad * desta.precio, 0) //suma del total
+
+    guardarCarritoStorage(carrito);
+    
+
+    
+    
+};
+
+
+//A solucionar: se me suman en el modal los id del otro array de objetos "productos"

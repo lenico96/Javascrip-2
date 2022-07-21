@@ -89,6 +89,7 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0) //suma del total
 
     guardarCarritoStorage(carrito);
+    
 
     
     
@@ -106,6 +107,7 @@ const eliminarDelCarrito = (prodId) => {
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito()
+    
 })
 
 
@@ -150,6 +152,7 @@ for (const btn of buttons)
 
     })
 }
+
 
 
 
