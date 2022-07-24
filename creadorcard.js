@@ -1,5 +1,5 @@
 
-const contenedorProductos = document.getElementById("producto-contenedor");
+
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 const botonVaciar = document.getElementById('vaciar-carrito')
 const contadorCarrito = document.getElementById('contadorCarrito')
@@ -18,6 +18,8 @@ const precioTotal = document.getElementById('precioTotal')
 //array carrito
 let carrito = []
 // 1 cards//
+const mostrarProductos = () => {
+    const contenedorProductos = document.getElementById("producto-contenedor");
     productos.forEach((producto) => {
         const div = document.createElement("div");       //primero inyecto el html al doom
         div.classList.add("producto");
@@ -42,6 +44,8 @@ let carrito = []
             
         })
     });
+};
+mostrarProductos()
 
 // 2 funcion agregar carro
 const agregarAlCarrito = (prodId) => {

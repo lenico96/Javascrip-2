@@ -65,11 +65,11 @@ destacados.forEach((destacado) => {
 });
 
 const agregarDestacados = (destaId) => {
-    const existe = carrito.find (desta => desta.id === destaId) 
+    const agreDesta = carrito.find (desta => desta.id === destaId) 
 
-    if (existe){ 
-        const prod = carrito.map (prod => { 
-            if (desta.id === prodId){
+    if (agreDesta){ 
+        const destaa = destacados.map (prod => { 
+            if (destaId === prod.id){
                 desta.cantidad++
             }
         })
@@ -106,7 +106,7 @@ const actualizarDestacado = () => {
     })
     contadorCarrito.innerText = carrito.length    //le agrego el contador con un innertext
     
-    precioTotal.innerText = carrito.reduce((acc, desta) => acc + desta.cantidad * desta.precio, 0) //suma del total
+    precioTotal.innerText = destacados.reduce((acc, desta) => acc + desta.cantidad * desta.precio, 0) //suma del total
 
     guardarCarritoStorage(carrito);
     
