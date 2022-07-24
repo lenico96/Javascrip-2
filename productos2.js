@@ -1,6 +1,7 @@
 
 
 //ROMPI TODO XDDDDDDD//
+//se agregan los productos bien al modal, pero cuando quiero agregar otro se suma mal la cantidad y me agrega otro objeto 
 
 const contenedorProductos2 = document.getElementById("producto-contenedor2");
 
@@ -116,4 +117,3 @@ const actualizarDestacado = () => {
 };
 
 
-//A solucionar: se me suman en el modal los id del otro array de objetos "productos"
